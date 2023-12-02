@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            color: #000;
+            padding: 10px;
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+
+        .logo img {
+            height: 100px;
+            width: 200px;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            width: 100%;
+            height: 38px;
+            border: none;
+            background-color: #F5FBFB;
+            font-family: Inter;
+            font-size: 18px;
+            border-radius: 25px;
+            margin-right: 10px;
+        }
+
+        .searchIcon {
+            margin-left: 0px;
+            margin-right: 50px;
+            position: relative;
+            right: 60px;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icon {
+            margin-left: 10px;
+        }
+
+        .emailicon,
+        .Line1,
+        .bellicon,
+        .Line2,
+        .manicon,
+        .Ellipse {
+            margin: 0px 5px;
+        }
+
+        .exampleicon {
+            margin-right: -15px;
+        }
+
+        .manicon {
+            position: absolute;
+            left: 1424px;
+            top: 25px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-bar {
+                margin-top: 10px;
+            }
+
+            .icons {
+                margin-top: 10px;
+            }
+
+            .icon {
+                margin-left: 0;
+            }
+
+            .manicon {
+                display: none;
+            }
+        }
+
+        /* ================================================ */
+        .sidebar {
+            height: 100vh;
+            width: 200px;
+            background-color: #fff;
+            color: #737373;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu-item:hover {
+            background-color: #E1F0F2;
+        }
+
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 30px;
+        }
+
+        .menu-icon2 {
+            width: 24px;
+            height: 24px;
+            margin-right: 65px;
+        }
+
+        .menu-item2 {
+            position: relative;
+            top: 350px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                justify-content: center;
+                padding-top: 0;
+                position: fixed;
+                z-index: 1;
+            }
+
+            .menu-item {
+                padding: 15px;
+                margin: 10px 0;
+            }
+
+            .menu-item2 {
+                position: relative;
+                top: 450px;
+            }
+
+            .menu-icon {
+                margin-right: 10px;
+            }
+
+            .menu-icon2 {
+                margin-right: 10px;
+            }
+        }
+
+        /* Additional Styles for the Paragraph */
+        .content {
+            position: absolute;
+            left: 250px;
+            width: 1250px;
+            height: 700px;
+            bottom: 150px;
+            top: 140px;
+            background-color: #F5FBFB;
+            color: #fff;
+        }
+        .h1{
+            margin-left: 20px;
+            color: #098590;
+            font-size: 29px;
+            font-family: Inter;
+            font-weight: 600;
+        }
+     
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 20px;
+            margin-left: 20px;
+            padding: 20px;
+            gap: 20px; /* Adjust the gap between cards as needed */
+            background-color: #E1F0F2;
+        }
+
+        .card {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2{
+            display: flex;
+            justify-content: center;
+            color: #098590;
+            font-size: 29px;
+            font-family: Inter;
+            font-weight: 600;
+            
+        }
+        p{
+            display: flex;
+            justify-content: center;
+            font-size: 50px;
+            position: relative;
+            top: 25px;
+            color: #737373;
+            font-family: Inter;
+            font-weight: 600;
+
+        }
+        @media screen and (max-width: 768px) {
+    .content {
+        position: static;
+        width: 650px;
+        height: auto;
+        bottom: 0;
+        top: 0;
+    }
+
+    .h1 {
+        margin-left: 5%;
+        font-size: 5vw;
+    }
+
+    .container {
+        margin-right: 5%;
+        margin-left: 5%;
+        padding: 5vw;
+        gap: 5vw;
+    }
+
+    .card {
+        flex: 1 0 100%; /* Allow cards to take full width on smaller screens */
+        margin-bottom: 5vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    p {
+        font-size: 8vw;
+        top: 5vw;
+    }
+}
+@media screen and (min-width: 1440px) {
+            .content {
+                width: 85%;
+                left: 15%;
+                height: 100%;
+            }
+         
+          
+        }
+        /* ============================== */
+        .downside{
+            position: relative;
+            left: 25px;
+            top: 20px;
+            display: flex;
+          
+            bottom: 0px;
+        }
+        .top1 img{
+            height: 150px;
+        }
+        .searchdiv{
+            position: relative;
+            left: 100px;
+            width: 650px;
+            background-color: #E1F0F2;
+        }
+        .searchdivInput{
+          position: relative;
+          left: 100px;
+          top: 45px;
+          width: 450px;
+          border: none;
+          height: 29px;
+          color: #737373;
+          background-color: #E1F0F2;
+        }
+        .hr1{
+            width: 450px;
+            margin-top: 55px;
+        }
+        .searchicon{
+            position: relative;
+            left: 520px;
+            bottom: 47px;
+        }
+        .btn1{
+            background-color: #098590;
+            color: #fff;
+            width: 191px;
+            font-size: 29px;
+            position: relative;
+            left: 150px;
+            top: 24px;
+            font-family: Inter;
+            border-radius: 35px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="./Img/RippleHealthcare_Logo_Final 2.png" alt="">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <img class="searchIcon" src="./Img/search 1.png" alt="">
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <img class="emailicon" src="./Img/email (1) 1.png" alt="">
+                <img class="Line1" src="./Img/Line 3.png" alt="">
+            </div>
+            <div class="icon">
+                <img class="bellicon" src="./Img/bell 1.png" alt="">
+                <img class="Line2" src="./Img/Line 3.png" alt="">
+            </div>
+            <div class="icon">
+                <img class="exampleicon" src="./Img/Example.png" alt="">
+            </div>
+         
+            <div class="icon">
+                <img class="Ellipse" src="./Img/manwithring.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- ===============sidebar=================== -->
+    <div class="sidebar">
+        <div class="menu-item">
+            <img src="./Img/dashboard (1).png" alt="Dashboard" class="menu-icon">
+            <div> <a href="./Dashboard.html" style="text-decoration: none; color: #737373;" >Dashboard</a></div>
+        </div>
+        <div class="menu-item">
+            <img src="./Img/user (1).png" class="menu-icon2" alt="">
+            <div class="Profile"> <a href="./Profile1.html" style="color: #737373; text-decoration: none;">Profile</a> </div>
+        </div>
+        <div class="menu-item">
+            <img src="./Img/cloud-computing (2).png" alt="Cloud Drive" class="menu-icon">
+            <div>
+                <a href="./Clouddrive.html" style="text-decoration: none; color: #737373;" >Cloud Drive</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="./Img/folder.png" alt="Shared Drive" class="menu-icon">
+            <div>
+                <a href="./Shareddrive.html" style="text-decoration: none; color: #737373;" >Shared Drive</a>
+            </div>
+        </div>
+        <div class="menu-item2">
+            <div class="menu-item">
+                <img src="./Img/setting (1).png" alt="Settings" class="menu-icon">
+                <div>Settings</div>
+            </div>
+            <div class="menu-item">
+                <img src="./Img/customer-service (1) (1).png" alt="Support" class="menu-icon">
+                <div>Support</div>
+            </div>
+            <div class="menu-item">
+                <img src="./Img/logout (1).png" alt="Logout" class="menu-icon">
+                <div>Logout</div>
+            </div>
+        </div>
+    </div>
+    <!-- ===============sidebar end ================================= -->
+    <div class="content">
+          <h1 class="h1">Global Data</h1>
+          <div class="container">
+            <div class="card">
+                <h2>Risk of Fall Data</h2>
+                <p>23%</p>
+            </div>
+            <div class="card">
+                <h2>Total Download</h2>
+                <p>8.1K</p>
+            </div>
+            <div class="card">
+                <h2>Monthly Visitors</h2>
+                <p>1.2k</p>
+            </div>
+            <div class="card">
+                <h2>Daily Visitors</h2>
+                <p>78</p>
+            </div>
+        </div>
+         <div class="downside ">
+        <div class="top1">
+            <a href="./Hiprodetails.html">
+
+                <img src="./Img/without_strap30.png" alt="">
+            </a>
+            <br>
+            <br>
+            <a href="./Steadysteps.html">
+
+                <img src="./Img/without_strap29.png" alt="">
+            </a>
+        </div>
+        <div class="searchdiv">
+            <h1 class="h1"> User Details </h1>
+
+            <input class="searchdivInput" type="text" placeholder="Type user Id Here.....  ">
+        <hr class="hr1">
+<img class="searchicon" src="./Img/search 1.png" alt="">
+
+<div class="btn1" href="./userdetails.html">   
+    <a href="./userdetails.html" style="text-decoration: none; color: white; margin-left: 45px;">Search</a>
+</div>
+        </div>
+    </div> 
+   
+    </div>
+    <!-- ========================================= -->
+   
+</body>
+
+</html>
